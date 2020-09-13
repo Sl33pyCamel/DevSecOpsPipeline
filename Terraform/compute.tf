@@ -1,6 +1,6 @@
 #Compute Instances
 resource "aws_instance" "jenkinsmaster" {
-    ami = data.aws_ami.amazon-linux-2.id
+    ami = ami-045db96d
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
     key_name = "login"
