@@ -1,7 +1,7 @@
 #Initialize the KeyPair
 resource "aws_key_pair" "default" {
-  key_name = "login"
-  public_key = file("login.pem")
+  key_name = "ssh_jenkins"
+  public_key = file("ssh_jenkins.pem")
 }
 
 resource "aws_vpc" "CICDvpc" {
