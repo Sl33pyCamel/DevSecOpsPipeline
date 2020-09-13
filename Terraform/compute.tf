@@ -3,7 +3,6 @@ resource "aws_instance" "jenkinsmaster" {
     ami = data.aws_ami.amazon-linux-2.id
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
-    user_data = file("install_jenkins.sh")
     key_name = "login"
     associate_public_ip_address = true
     subnet_id = aws_subnet.public-subnet-1.id
