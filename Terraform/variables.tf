@@ -29,5 +29,5 @@ variable "vpc_cidr" {
 }
 
 variable "ssh_key" {
-    default = "~/.ssh/login.ppk"
+    default = "~/.ssh/ssh_jenkins"
     }
