@@ -9,8 +9,6 @@ resource "aws_instance" "jenkinsmaster" {
     tags = {
         Name = "Jenkins_Master"
     }
-    depends_on = [aws_security_group.jenkins_sg]
-}
 
 #Allow Terrform to connect via ssh
     connection {
