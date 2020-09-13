@@ -3,7 +3,7 @@ resource "aws_instance" "jenkinsmaster" {
     ami = "ami-0b331d9b32ae9db2d"
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
-    key_name = "login"
+    key_name = "ssh_jenkins"
     associate_public_ip_address = true
     subnet_id = aws_subnet.public-subnet-1.id
     tags = {
