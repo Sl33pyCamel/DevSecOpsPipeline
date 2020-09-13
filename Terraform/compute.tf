@@ -14,7 +14,7 @@ resource "aws_instance" "jenkinsmaster" {
     connection {
         user = "ec2-user"
         type = "ssh"
-        private_key = file(var.ssh_key)
+        private_key = file("ssh_jenkins_priv.ppk")
         host = "self.public_ip"
         timeout = "2m"
     }
